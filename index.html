@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disaster Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Disaster Dashboard</h1>
+  <div class="controls">
+    <label>Type
+      <select id="type"><option value="all">All</option><option value="earthquake">Earthquakes</option><option value="wildfire">Wildfires</option><option value="storm">Storms</option><option value="volcano">Volcanoes</option><option value="flood">Floods</option><option value="other">Other</option></select>
+    </label>
+    <label>Min severity
+      <select id="sev"><option value="0">Any</option><option value="1">Moderate+</option><option value="2">High+</option><option value="3">Critical</option></select>
+    </label>
+    <button id="refresh">Refresh</button>
+  </div>
+</header>
+<main>
+  <section class="stats" id="stats"></section>
+  <section class="panel map-panel"><h2>Map</h2><div id="map"></div></section>
+  <section class="panel list-panel"><h2>Events <span id="count"></span></h2><ul id="list"></ul></section>
+</main>
+<footer id="status">Loading…</footer>
+<script src="app.js"></script>
+</body>
+</html>
